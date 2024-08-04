@@ -8,21 +8,35 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="row">
-            <div class="col" id="1">1</div>
-            <div class="col" id="2">2</div>
-            <div class="col" id="3">3</div>
+            <div class="col" onclick="numberInput(0)">0</div>
+            <div class="col">.</div>
+            <div class="col" onclick="evaluate_expn()">=</div>
+            <div class="col" onclick="operatorInput('+')">+</div>
         </div>
         <div class="row">
-            <div class="col" id="4">4</div>
-            <div class="col" id="5">5</div>
-            <div class="col" id="6">6</div>
+            <div class="col" id="1" onclick="numberInput(1)">1</div>
+            <div class="col" id="2" onclick="numberInput(2)">2</div>
+            <div class="col" id="3" onclick="numberInput(3)">3</div>
+            <div id="plus" class="col" onclick="operatorInput('-')">-</div>
         </div>
         <div class="row">
-            <div class="col" id="7">7</div>
-            <div class="col" id="8">8</div>
-            <div class="col" id="9">9</div>
+            <div class="col" id="4" onclick="numberInput(4)">4</div>
+            <div class="col" id="5" onclick="numberInput(5)">5</div>
+            <div class="col" id="6" onclick="numberInput(6)">6</div>
+            <div id="minus" class="col" onclick="operatorInput('*')">*</div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col" id="7" onclick="numberInput(7)">7</div>
+            <div class="col" id="8" onclick="numberInput(8)">8</div>
+            <div class="col" id="9" onclick="numberInput(9)">9</div>
+            <div id="multiply" class="col" onclick="operatorInput('/')">/</div>
+        </div>
+        <div class="row result">
+            <div class="col" id="result">0</div>
+        </div>
+    </div> 
+    <script src="script.js"></script>
 </body>
 </html>
