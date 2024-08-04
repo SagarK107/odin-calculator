@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    margin: auto;
+    padding: auto;
+    height:30%;
+}
+
+
