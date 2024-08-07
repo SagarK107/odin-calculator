@@ -7,12 +7,14 @@ function numberInput(num)
     if (calculator_data.currentNumber === "1")
     {
         calculator_data.num1 = (calculator_data.num1 * 10) + num;
+        document.getElementById("result").textContent = calculator_data.num1;
         
     }
 
     else if (calculator_data.currentNumber === "2")
     {
         calculator_data.num2 = (calculator_data.num2 * 10) + num;
+        document.getElementById("result").textContent = calculator_data.num2;
         
     }
 
@@ -58,11 +60,14 @@ function operation(num1,num2,operation)
         case "/":
             if (num2 === 0)
             {
-                return NaN;
+                allClear(NaN);
+                return 0;
+                
+                
             }
             return num1 / num2;
         default:
-            return NaN;
+            return 0;
     }
 }
 
@@ -77,4 +82,11 @@ function evaluate_expn()
     document.getElementById("result").textContent = calculator_data.num1;
 }
 
-
+function allClear(resultValue)
+{
+    calculator_data.num1 = 0;
+    calculator_data.num2 = 0;
+    calculator_data.operation = "";
+    calculator_data.currentNumber = "1";
+    document.getElementById("result").textContent = resultValue;
+}
